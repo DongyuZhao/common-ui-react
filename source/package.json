@@ -1,0 +1,28 @@
+{
+    "name": "common-ui-react",
+    "version": "0.0.1",
+    "description": "",
+    "main": "./dist/Index.js",
+    "types": "./dist/Index.d.ts",
+    "author": {
+        "name": "Dongyu Zhao",
+        "email": "dongyu.zhao@outlook.com",
+        "url": "https://github.com/DongyuZhao/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DongyuZhao/common-ui-react"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "react": "16.13.1",
+        "react-jss": "10.3.0"
+    },
+    "devDependencies": {
+        "@types/react": "^16.9.38",
+        "typescript": "^3.9.5"
+    }
+}

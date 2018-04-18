@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ES2020",
+        "rootDir": "src",
+        "outDir": "dist",
+        "jsx": "preserve",
+        "moduleResolution": "Node",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowUnreachableCode": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "declaration": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "typeRoots": [
+            "node_modules/@types",
+            "@types",
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "typings",
+        "js",
+        "@types"
+    ],
+    "include": [
+        "src"
+    ],
+    "compileOnSave": false
+}
