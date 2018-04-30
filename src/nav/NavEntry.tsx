@@ -2,7 +2,7 @@ import * as React from 'react';
 import { LogUtil } from '../utils/Log';
 import { Theme, ThemeUtil } from '../utils/Theme';
 
-export class NavBarEntryProps {
+export class NavEntryProps {
     public id?: string;
     public text?: string;
     public theme?: Theme;
@@ -15,10 +15,10 @@ export class NavBarEntryProps {
     public onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
 }
 
-export class NavBarEntry extends React.Component<NavBarEntryProps> {
-    private static LOG_TAG = 'NavBarEntry';
+export class NavEntry extends React.Component<NavEntryProps> {
+    private static LOG_TAG = 'NavEntry';
 
-    constructor(props: NavBarEntryProps) {
+    constructor(props: NavEntryProps) {
         super(props);
 
         this.onBlur = this.onBlur.bind(this);
@@ -34,7 +34,7 @@ export class NavBarEntry extends React.Component<NavBarEntryProps> {
         return (
             <button
                 id={this.props.id}
-                className={ThemeUtil.getThemedClassName('nav-button', this.props.theme)}
+                className={ThemeUtil.getThemedClassName('nav-entry', this.props.theme)}
                 tabIndex={this.props.tabIndex ? this.props.tabIndex : -1}
                 onClick={this.onClick}
                 onFocus={this.onFocus}
@@ -91,6 +91,6 @@ export class NavBarEntry extends React.Component<NavBarEntryProps> {
     }
 
     private log(event: string, message: string) {
-        LogUtil.logMessage(NavBarEntry.LOG_TAG, this.props.id, event, message);
+        LogUtil.logMessage(NavEntry.LOG_TAG, this.props.id, event, message);
     }
 }

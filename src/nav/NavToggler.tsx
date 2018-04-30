@@ -43,8 +43,9 @@ export class NavToggler extends React.Component<NavTogglerProps, NavTogglerState
         return (
             <button
                 ref={(btn) => this.selfRef = btn}
-                className={ThemeUtil.getThemedClassName('nav-bar-toggler', this.props.theme)}
-                tabIndex={this.props.tabIndex} onClick={this.onClick}
+                className={ThemeUtil.getThemedClassName('nav-toggler', this.props.theme)}
+                tabIndex={this.props.tabIndex}
+                onClick={this.onClick}
                 onFocus={this.onFocus}
                 onBlur={this.onBlur}
                 onMouseEnter={this.onMouseEnter}

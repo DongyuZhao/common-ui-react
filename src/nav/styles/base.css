@@ -3,9 +3,11 @@
     border-radius: 2px;
     border-style: none;
     border-width: 0px;
+    text-align: left;
+    width: 100%;
 }
 
-.nav-bar-toggler {
+.nav-toggler {
     background: no-repeat center center;
     background-size: 24px 24px;
     border-style: none;
@@ -18,7 +20,26 @@
     width: 48px;
 }
 
-.nav-button {
+.nav-group {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-group.inline {
+    display: inline-flex;
+}
+
+.nav-group.column {
+    flex-direction: column;
+}
+
+.nav-group.row {
+    flex-direction: row;
+}
+
+.nav-entry {
     border-style: none;
     border-width: 0;
     display: inline-block;
@@ -29,6 +50,7 @@
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 14px;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
+    width: 100%;
 }

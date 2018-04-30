@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Theme, ThemeUtil } from '../utils/Theme';
+import { NavGroup, NavGroupProps } from './NavGroup';
 import { NavToggler } from './NavToggler';
 
 export class NavBarProps {
     public id?: string;
     public theme?: Theme;
     public tabIndex?: number;
+    public entryGroups?: NavGroupProps[];
 }
 
 export class NavBar extends React.Component<NavBarProps> {
@@ -24,8 +26,17 @@ export class NavBar extends React.Component<NavBarProps> {
                     theme={this.props.theme}
                     toggled={false}
                 />
-                {this.props.children}
+                {this.renderEntryGroups()}
             </div>
         );
+    }
+
+    private renderEntryGroups() {
+        if (this.props.entryGroups) {
+            return this.props.entryGroups.map((group) => {
+                return React.createElement(NavGroup, group);
+            });
+        }
+        return null;
     }
 }
