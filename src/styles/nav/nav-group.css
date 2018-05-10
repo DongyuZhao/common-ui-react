@@ -1,0 +1,11 @@
+.nav-group {
+    background-color: #e3e3e3;
+    color: #333;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-group.collapse {
+    display: none;
+}

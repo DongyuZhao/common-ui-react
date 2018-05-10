@@ -1,1 +1,2 @@
-@import './reboot.css';
+@import './styles/common/index.css';
+@import './styles/nav/index.css';

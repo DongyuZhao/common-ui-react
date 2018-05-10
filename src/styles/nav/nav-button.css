@@ -1,0 +1,23 @@
+.nav-button {
+    align-items: center;
+    background-color: #e3e3e3;
+    border-style: none;
+    border-width: 0px;
+    color: #333;
+    display: inline-flex;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 24px 12px 24px;
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.nav-button:hover {
+    background-color: #eee;
+    color: #0078D7;
+}
+
+.nav-button:focus {
+    outline: none;
+}

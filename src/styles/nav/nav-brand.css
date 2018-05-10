@@ -1,0 +1,25 @@
+.nav-brand {
+    align-items: center;
+    background-color: transparent;
+    border-style: none;
+    border-width: 0px;
+    color: inherit;
+    display: inline-flex;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 9px 23px 9px 23px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nav-brand>img {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav-brand:hover {
+    background-color: #eee;
+    color: #0078D7;
+    cursor: default;
+    text-decoration: none;
+}

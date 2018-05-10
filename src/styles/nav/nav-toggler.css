@@ -1,0 +1,24 @@
+.nav-toggler {
+    background: no-repeat center center;
+    background-color: #e3e3e3;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51, 51, 51, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: 24px 24px;
+    border-style: none;
+    border-width: 0;
+    display: inline-flex;
+    font-size: 16px;
+    height: 48px;
+    line-height: 20px;
+    vertical-align: middle;
+    width: 48px;
+}
+
+.nav-toggler:hover {
+    background-color: #eee;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 120, 215, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    color: #0078D7;
+}
+
+.nav-toggler:focus {
+    outline: none;
+}

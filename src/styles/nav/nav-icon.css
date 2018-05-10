@@ -1,0 +1,8 @@
+.nav-icon {
+    background-color: transparent;
+    display: inline-flex;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+    width: 18px;
+}
