@@ -1,0 +1,40 @@
+code {
+    font-size: 87.5%;
+    color: #bf3073;
+    word-break: break-word;
+}
+
+code a {
+    color: inherit;
+}
+
+kbd {
+    padding: .2rem .4rem;
+    font-size: 87.5%;
+    color: #fff;
+    background-color: #333;
+    border-radius: .2rem;
+}
+
+kbd kbd {
+    font-size: 100%;
+    font-weight: 700;
+    padding: 0;
+}
+
+pre {
+    display: block;
+    font-size: 87.5%;
+    color: #222;
+}
+
+pre code {
+    color: inherit;
+    font-size: inherit;
+    word-break: normal;
+}
+
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll;
+}

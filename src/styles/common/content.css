@@ -36,20 +36,6 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-mark, .mark {
-    padding: .2em;
-    background-color: #ff0;
-}
-
-small, .small {
-    font-size: 80%;
-    font-weight: 400;
-}
-
-b, .b, strong, .strong {
-    font-weight: bolder;
-}
-
 .text-muted {
     color: #777!important;
 }

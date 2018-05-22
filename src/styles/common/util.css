@@ -1,0 +1,152 @@
+.margin-top-0 {
+    margin-top: 0!important;
+}
+
+.margin-right-0 {
+    margin-right: 0!important;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0!important;
+}
+
+.margin-left-0 {
+    margin-left: 0!important;
+}
+
+.margin-top-1 {
+    margin-top: 1rem!important;
+}
+
+.margin-right-1 {
+    margin-right: 1rem!important;
+}
+
+.margin-bottom-1 {
+    margin-bottom: 1rem!important;
+}
+
+.margin-left-1 {
+    margin-left: 1rem!important;
+}
+
+.margin-auto {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+.padding-top-0 {
+    padding-top: 0!important;
+}
+
+.padding-right-0 {
+    padding-right: 0!important;
+}
+
+.padding-bottom-0 {
+    padding-bottom: 0!important;
+}
+
+.padding-left-0 {
+    padding-left: 0!important;
+}
+
+.padding-top-1 {
+    padding-top: 1rem!important;
+}
+
+.padding-right-1 {
+    padding-right: 1rem!important;
+}
+
+.padding-bottom-1 {
+    padding-bottom: 1rem!important;
+}
+
+.padding-left-1 {
+    padding-left: 1rem!important;
+}
+
+.align-baseline {
+    vertical-align: baseline !important;
+}
+
+.align-top {
+    vertical-align: top !important;
+}
+
+.align-middle {
+    vertical-align: middle !important;
+}
+
+.align-bottom {
+    vertical-align: bottom !important;
+}
+
+.align-text-bottom {
+    vertical-align: text-bottom !important;
+}
+
+.align-text-top {
+    vertical-align: text-top !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.position-static {
+    position: static;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: sticky;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}

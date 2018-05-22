@@ -1,0 +1,10 @@
+.list-unstyled {
+    list-style: none;
+}
+
+.list-inline>li {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+}
