@@ -8,8 +8,12 @@
         "react-scripts-ts": "latest"
     },
     "scripts": {
-        "start": "react-scripts-ts start",
-        "build": "react-scripts-ts build",
+        "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+        "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+        "start": "npm-run-all -p watch-css start-ts",
+        "start-ts": "react-scripts-ts start",
+        "build": "npm-run-all build-css build-ts",
+        "build-ts": "react-scripts-ts build",
         "test": "react-scripts-ts test --env=jsdom",
         "eject": "react-scripts-ts eject"
     },
@@ -18,6 +22,8 @@
         "@types/node": "latest",
         "@types/react": "latest",
         "@types/react-dom": "latest",
+        "node-sass-chokidar": "latest",
+        "npm-run-all": "latest",
         "typescript": "latest"
     }
 }
