@@ -1,0 +1,7 @@
+.screenreader-only {
+    @include sr-only();
+}
+
+.screenreader-only-focusable {
+    @include sr-only-focusable();
+}

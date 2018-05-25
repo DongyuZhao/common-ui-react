@@ -1,0 +1,15 @@
+@each $color, $value in $theme-colors {
+    @include background-variant(".background-#{$color}", $value);
+}
+
+@each $color, $value in $theme-colors {
+    @include background-gradient-variant(".background-gradient-#{$color}", $value);
+}
+
+.background-white {
+    background-color: $white !important;
+}
+
+.background-transparent {
+    background-color: transparent !important;
+}
