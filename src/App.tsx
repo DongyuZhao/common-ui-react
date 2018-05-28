@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import { Button } from './components/input/Button';
+import { LinkButton } from './components/input/LinkButton';
 import logo from './logo.svg';
 import { Theme } from './shared/Theme';
 
@@ -17,18 +17,102 @@ class App extends React.Component {
                     To get started, edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <div className='container text-left'>
-                    <Button theme={Theme.Primary} outline={true} disabled={true} fill={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Info} outline={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Warning} outline={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Caution} outline={true} fill={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Error} outline={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Success} outline={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Primary} outline={false} disabled={true} fill={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Info} outline={false}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Warning} outline={false}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Caution} outline={false} fill={true}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Error} outline={false}>From Microsoft, built with love.</Button>
-                    <Button theme={Theme.Success} outline={false}>From Microsoft, built with love.</Button>
+                    <LinkButton
+                        theme={Theme.Primary}
+                        outline={true}
+                        disabled={true}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Info}
+                        outline={true}
+                        disabled={true}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Warning}
+                        outline={true}
+                        disabled={true}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Caution}
+                        outline={true}
+                        disabled={true}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Error}
+                        outline={true}
+                        disabled={true}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Success}
+                        outline={true}
+                        disabled={true}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Primary}
+                        outline={true}
+                        disabled={false}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Info}
+                        outline={true}
+                        disabled={false}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Warning}
+                        outline={true}
+                        disabled={false}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Caution}
+                        outline={true}
+                        disabled={false}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Error}
+                        outline={true}
+                        disabled={false}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
+                    <LinkButton
+                        theme={Theme.Success}
+                        outline={true}
+                        disabled={false}
+                        fill={true}
+                    >
+                        From Microsoft, built with love.
+                    </LinkButton>
                 </div>
             </div>
         );

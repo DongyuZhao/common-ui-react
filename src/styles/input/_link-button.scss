@@ -1,0 +1,51 @@
+.link-button {
+    background-color: transparent;
+    border: $input-border;
+    border-color: transparent;
+    border-radius: $border-radius;
+    display: inline-flex;
+    font-size: $font-size-normal;
+    align-content: center;
+    justify-content: center;
+    min-width: $input-min-width;
+    padding: $input-padding-vertical $input-padding-horizon;
+    margin: $input-margin;
+    text-align: center;
+    text-decoration: $link-decoration;
+
+    @include hover-focus {
+        text-decoration: $link-decoration;
+        box-shadow: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $input-disable-capacity;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-image: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .link-button.#{$color}, a.link-button.#{$color}{
+        @include link-button-variant($value);
+    }
+}

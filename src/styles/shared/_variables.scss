@@ -176,7 +176,7 @@ $mark-padding:                .2em !default;
 $mark-background:                      $yellow !default;
 
 $link-color:                theme-color('primary') !default;
-$link-decoration:           none !default;
+$link-decoration:           underline !default;
 $link-hover-color:          darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
 
