@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import { ButtonLink } from './components/input/ButtonLink';
+import { ButtonInput } from './components/input/ButtonInput';
 import logo from './logo.svg';
 import { Theme } from './shared/Theme';
 
@@ -17,101 +17,89 @@ class App extends React.Component {
                     To get started, edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <div className='container text-left'>
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Primary}
                         outline={true}
                         disabled={true}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Info}
                         outline={true}
                         disabled={true}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Warning}
                         outline={true}
                         disabled={true}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Caution}
                         outline={true}
                         disabled={true}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Error}
                         outline={true}
                         disabled={true}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Success}
                         outline={true}
                         disabled={true}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Primary}
                         outline={false}
-                        disabled={true}
+                        disabled={false}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Info}
                         outline={false}
-                        disabled={true}
+                        disabled={false}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Warning}
                         outline={false}
-                        disabled={true}
+                        disabled={false}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Caution}
                         outline={false}
-                        disabled={true}
+                        disabled={false}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Error}
                         outline={false}
-                        disabled={true}
+                        disabled={false}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
-                    <ButtonLink
-                        url={'#'}
+                    <ButtonInput
                         theme={Theme.Success}
                         outline={false}
-                        disabled={true}
+                        disabled={false}
                         fill={true}
-                        text='From Microsoft, built with love.'
+                        value='From Microsoft, built with love.'
                     />
                 </div>
             </div>
