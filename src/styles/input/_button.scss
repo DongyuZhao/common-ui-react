@@ -1,0 +1,79 @@
+.button {
+    background-color: $input-background;
+    border: $input-border;
+    border-color: $input-border-color;
+    border-radius: $border-radius;
+    display: inline-flex;
+    font-size: $font-size-normal;
+    align-content: center;
+    justify-content: center;
+    min-width: $input-min-width;
+    padding: $input-padding-vertical $input-padding-horizon;
+    margin: $input-margin;
+    text-align: center;
+
+    @include hover-focus {
+        text-decoration: none;
+        box-shadow: $input-focus-shadow;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $input-disable-capacity;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-image: none;
+
+        &:focus {
+            box-shadow: $input-focus-shadow;
+        }
+    }
+
+    &.fill {
+        display: block;
+        width: 100%;
+
+        + .button.fill {
+            margin-top: $button-block-spacing-y;
+        }
+    }
+}
+
+a.button.disabled,
+fieldset:disabled a.button {
+  pointer-events: none;
+}
+
+@each $color, $value in $theme-colors {
+    .button.#{$color}, a.button.#{$color}{
+        @include button-variant($value, $value);
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .button.#{$color}.outline, a.button.#{$color}.outline {
+        @include button-outline-variant($value);
+    }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.button.fill {
+        width: 100%;
+    }
+}
