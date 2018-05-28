@@ -11,6 +11,7 @@
     padding: $input-padding-vertical $input-padding-horizon;
     margin: $input-margin;
     text-align: center;
+    text-decoration: none;
 
     @include hover-focus {
         text-decoration: none;
