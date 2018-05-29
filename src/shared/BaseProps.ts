@@ -14,6 +14,15 @@ export interface IUrlProps {
     text: string;
 }
 
+export interface ICheckableProps<T> {
+    checked: boolean;
+    value: T;
+    title?: string;
+    description?: string;
+    onCheck?: (value: T) => void;
+    onUncheck?: (value: T) => void;
+}
+
 export interface IClipboardAwareProps<T> {
     onCopy?: React.ClipboardEventHandler<T>;
     onCopyCapture?: React.ClipboardEventHandler<T>;
