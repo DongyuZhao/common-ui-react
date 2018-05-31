@@ -29,8 +29,8 @@ export class CheckBox<T> extends React.Component<ICheckBoxProps<T>, ICheckBoxSta
     public render() {
         return (
             <div
-                className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('checkbox choice', this.props))}
                 {...this.props}
+                className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('checkbox choice', this.props))}
             >
                 <input
                     type='checkbox'

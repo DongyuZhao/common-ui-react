@@ -19,10 +19,10 @@ export class ButtonInput extends React.Component<IButtonInputProps> {
     public render() {
         return (
             <input
+                {...this.props}
                 className={ThemeUtils.getThemedStyleClassName('button', this.props)}
                 role='button'
                 type='submit'
-                {...this.props}
                 value={this.props.value}
             />
         );

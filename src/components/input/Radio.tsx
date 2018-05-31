@@ -31,8 +31,8 @@ export class Radio<T> extends React.Component<IRadioProps<T>, IRadioState> {
     public render() {
         return (
             <div
-                className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('radio choice', this.props))}
                 {...this.props}
+                className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('radio choice', this.props))}
             >
                 <input
                     type='radio'

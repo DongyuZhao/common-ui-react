@@ -18,9 +18,9 @@ export class Button extends React.Component<IButtonProps> {
     public render() {
         return (
             <button
+                {...this.props}
                 className={ThemeUtils.getThemedStyleClassName('button', this.props)}
                 role='button'
-                {...this.props}
             >
                 {this.props.children}
             </button>

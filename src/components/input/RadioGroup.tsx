@@ -6,7 +6,7 @@ export interface IRadioGroupProps<T> extends
     IBaseProps,
     IMultipleChoiseProps<T> {
     choices: Array<IRadioProps<T>>;
-    defaultValue?: T;
+    default?: T;
     noMinWidth?: boolean;
     noMaxWidth?: boolean;
 }
@@ -22,7 +22,7 @@ export class RadioGroup<T> extends React.Component<IRadioGroupProps<T>, IRadioGr
         super(props);
 
         this.state = {
-            selected: this.props.defaultValue,
+            selected: this.props.default,
         };
 
         this.registerCallback();
@@ -31,7 +31,10 @@ export class RadioGroup<T> extends React.Component<IRadioGroupProps<T>, IRadioGr
 
     public render() {
         return (
-            <div className={this.getLayoutDecorator('radio-group')}>
+            <div
+                {...this.props}    
+                className={this.getLayoutDecorator('radio-group')}
+            >
                 {this.renderRadioEntires()}
             </div>
         );

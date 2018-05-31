@@ -19,10 +19,10 @@ export class ButtonLink extends React.Component<IButtonLinkProps> {
     public render() {
         return (
             <a
+                {...this.props}
                 href={this.props.url}
                 className={ThemeUtils.getThemedStyleClassName('button', this.props)}
                 role='button'
-                {...this.props}
             >
                 {this.props.text}
             </a>
