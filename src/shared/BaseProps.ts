@@ -30,7 +30,7 @@ export interface ICheckableProps<T> extends IChoiceProps<T> {
 
 export interface IMultipleChoiseProps<T> {
     choices: Array<IChoiceProps<T>>;
-    onChoose: (value: T) => void;
+    onChoose?: (value: T) => void;
 }
 
 export interface IClipboardAwareProps<T> {
