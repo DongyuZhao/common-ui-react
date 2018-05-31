@@ -15,6 +15,8 @@ export interface IUrlProps {
 }
 
 export interface IChoiceProps<T> {
+    id: string;
+    forName: string;
     value: T;
     title?: string;
     description?: string;

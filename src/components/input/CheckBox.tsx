@@ -32,7 +32,13 @@ export class CheckBox<T> extends React.Component<ICheckBoxProps<T>, ICheckBoxSta
                 className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('checkbox choice', this.props))}
                 {...this.props}
             >
-                <input type='checkbox' id={this.props.id + '-input'} checked={this.state.checked} onChange={this.onToggle}/>
+                <input
+                    type='checkbox'
+                    id={this.props.id + '-input'}
+                    checked={this.state.checked}
+                    onChange={this.onToggle}
+                    name={this.props.forName}
+                />
                 <label htmlFor={this.props.id + '-input'}>
                     <div className={this.getStateDecorator()} />
                     <div>
