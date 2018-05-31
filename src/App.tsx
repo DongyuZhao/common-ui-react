@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import { CheckBox } from './components/input/CheckBox';
+import { Radio } from './components/input/Radio';
 import logo from './logo.svg';
 import { Theme } from './shared/Theme';
 
@@ -17,10 +17,11 @@ class App extends React.Component {
                     To get started, edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <div className='container text-left'>
-                    <CheckBox
+                    <Radio
                         id='text-check-box-primary'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Primary}
                         noMaxWidth={true}
                         // tslint:disable-next-line:max-line-length
@@ -28,45 +29,51 @@ class App extends React.Component {
                         // tslint:disable-next-line:max-line-length
                         description='Most people have only just begun to explore the Windows 10 April Update. But for Windows Insiders, the exploration begun over six months ago, with the first Insider Preview builds for this release. '
                     />
-                    <CheckBox
+                    <Radio
                         id='text-check-box-secondary'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Secondary}
                         title='From Microsoft'
                     />
-                    <CheckBox
+                    <Radio
                         id='text-check-box-info'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Info}
                         title='From Microsoft'
                     />
-                    <CheckBox
+                    <Radio
                         id='text-check-box-warning'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Warning}
                         title='From Microsoft'
                     />
-                    <CheckBox
+                    <Radio
                         id='text-check-box-caution'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Caution}
                         title='From Microsoft'
                     />
-                    <CheckBox
+                    <Radio
                         id='text-check-box-error'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Error}
                         title='From Microsoft'
                     />
-                    <CheckBox
+                    <Radio
                         id='text-check-box-success'
+                        forName='microsoft'
                         value='test'
-                        checked={true}
+                        checked={false}
                         theme={Theme.Success}
                         title='From Microsoft'
                     />

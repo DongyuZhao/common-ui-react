@@ -1,0 +1,15 @@
+.radio {
+
+    input[type='radio'] {
+        display: none;
+    }
+
+    .indicator {
+        border-radius: 50%;
+    }
+
+    .indicator.checked {
+        background-size: 75% 75%;
+        background-image: $radio-indicator-icon-checked;
+    }
+}

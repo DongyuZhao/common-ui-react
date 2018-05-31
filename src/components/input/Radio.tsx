@@ -1,22 +1,24 @@
 import * as React from 'react';
-import { IBaseProps, ICheckableProps, IThemeProps } from '../../shared/BaseProps';
+import { IBaseProps, IChoiceProps, IThemeProps } from '../../shared/BaseProps';
 import { ThemeUtils } from '../../shared/Theme';
 
-export interface ICheckBoxProps<T> extends
+export interface IRadioProps<T> extends
     IBaseProps,
-    ICheckableProps<T>,
+    IChoiceProps<T>,
     IThemeProps {
     id: string;
+    forName: string;
+    checked: boolean;
     noMinWidth?: boolean;
     noMaxWidth?: boolean;
 }
 
-interface ICheckBoxState {
+interface IRadioState {
     checked: boolean;
 }
 
-export class CheckBox<T> extends React.Component<ICheckBoxProps<T>, ICheckBoxState> {
-    constructor(props: ICheckBoxProps<T>) {
+export class Radio<T> extends React.Component<IRadioProps<T>, IRadioState> {
+    constructor(props: IRadioProps<T>) {
         super(props);
 
         this.state = {
@@ -29,10 +31,16 @@ export class CheckBox<T> extends React.Component<ICheckBoxProps<T>, ICheckBoxSta
     public render() {
         return (
             <div
-                className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('checkbox choice', this.props))}
+                className={this.getLayoutDecorator(ThemeUtils.getThemedStyleClassName('radio choice', this.props))}
                 {...this.props}
             >
-                <input type='checkbox' id={this.props.id + '-input'} checked={this.state.checked} onChange={this.onToggle}/>
+                <input
+                    type='radio'
+                    id={this.props.id + '-input'}
+                    name={this.props.forName}
+                    checked={this.state.checked}
+                    onChange={this.onToggle}
+                />
                 <label htmlFor={this.props.id + '-input'}>
                     <div className={this.getStateDecorator()} />
                     <div>
@@ -45,7 +53,7 @@ export class CheckBox<T> extends React.Component<ICheckBoxProps<T>, ICheckBoxSta
     }
 
     public onToggle() {
-        this.setState((prevState: ICheckBoxState) => ({
+        this.setState((prevState: IRadioState) => ({
             checked: !prevState.checked
         }), this.handleCallback);
     }
@@ -89,9 +97,6 @@ export class CheckBox<T> extends React.Component<ICheckBoxProps<T>, ICheckBoxSta
     private handleCallback() {
         if (this.state.checked && this.props.onCheck) {
             this.props.onCheck(this.props.value);
-        }
-        if (!this.state.checked && this.props.onUncheck) {
-            this.props.onUncheck(this.props.value);
         }
     }
 }

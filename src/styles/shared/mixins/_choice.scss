@@ -1,15 +1,15 @@
-@mixin checkbox-variant($color) {
+@mixin choice-variant($color) {
     @include hover-focus {
-        .box {
+        .indicator {
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px  $color;
         }
     }
 
-    .box {
+    .indicator {
         border-color: $color;
     }
 
-    .box.checked {
+    .indicator.checked {
         background-color: rgba($color, .5);
     }
 

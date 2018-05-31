@@ -14,13 +14,21 @@ export interface IUrlProps {
     text: string;
 }
 
-export interface ICheckableProps<T> {
-    checked: boolean;
+export interface IChoiceProps<T> {
     value: T;
     title?: string;
     description?: string;
+    checked: boolean;
     onCheck?: (value: T) => void;
+}
+
+export interface ICheckableProps<T> extends IChoiceProps<T> {
     onUncheck?: (value: T) => void;
+}
+
+export interface IMultipleChoiseProps<T> {
+    choices: Array<IChoiceProps<T>>;
+    onChoose: (value: T) => void;
 }
 
 export interface IClipboardAwareProps<T> {
