@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IBaseProps, IMultipleChoiseProps } from '../../shared/BaseProps';
 import { IRadioProps, Radio } from './Radio';
 
-export interface IRadioGroupProps<T> extends
+export interface IRadioSetProps<T> extends
     IBaseProps,
     IMultipleChoiseProps<T> {
     choices: Array<IRadioProps<T>>;
@@ -11,14 +11,14 @@ export interface IRadioGroupProps<T> extends
     noMaxWidth?: boolean;
 }
 
-interface IRadioGroupState<T> {
+interface IRadioSetState<T> {
     selected?: T;
 }
 
-export class RadioGroup<T> extends React.Component<IRadioGroupProps<T>, IRadioGroupState<T>> {
+export class RadioSet<T> extends React.Component<IRadioSetProps<T>, IRadioSetState<T>> {
     private callbackEvents: Map<T, (value: T) => void>;
 
-    constructor(props: IRadioGroupProps<T>) {
+    constructor(props: IRadioSetProps<T>) {
         super(props);
 
         this.state = {
@@ -32,8 +32,8 @@ export class RadioGroup<T> extends React.Component<IRadioGroupProps<T>, IRadioGr
     public render() {
         return (
             <div
-                {...this.props}    
-                className={this.getLayoutDecorator('radio-group')}
+                {...this.props}
+                className={this.getLayoutDecorator('radio-set')}
             >
                 {this.renderRadioEntires()}
             </div>
@@ -60,7 +60,7 @@ export class RadioGroup<T> extends React.Component<IRadioGroupProps<T>, IRadioGr
         this.props.choices.forEach(choice => {
             if (choice.onCheck) {
                 this.callbackEvents.set(choice.value, choice.onCheck);
-            }    
+            }
         });
     }
 
@@ -86,7 +86,7 @@ export class RadioGroup<T> extends React.Component<IRadioGroupProps<T>, IRadioGr
             const callback = this.callbackEvents.get(this.state.selected);
             if (callback) {
                 callback(this.state.selected);
-            }    
+            }
         }
         if (this.props.onChoose && this.state.selected) {
             this.props.onChoose(this.state.selected);

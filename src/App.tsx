@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import { RadioGroup } from './components/input/RadioGroup';
+import { RadioSet } from './components/input/RadioSet';
 import logo from './logo.svg';
 import { Theme } from './shared/Theme';
 
@@ -17,7 +17,7 @@ class App extends React.Component {
                     To get started, edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <div className='container text-left'>
-                    <RadioGroup choices={[
+                    <RadioSet choices={[
                         {
                             checked: false,
                             description: 'From Microsoft',
